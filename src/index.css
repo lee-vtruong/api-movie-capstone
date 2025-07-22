@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab {
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;    
+    padding: 12px 0 !important;       
+    margin-bottom: 8px !important;   
+}
+

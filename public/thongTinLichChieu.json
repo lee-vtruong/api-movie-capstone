@@ -1,0 +1,393 @@
+[
+    {
+        "statusCode": 200,
+        "message": "Xử lý thành công!",
+        "content": {
+            "heThongRapChieu": [
+                {
+                    "cumRapChieu": [
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46700",
+                                    "maRap": "469",
+                                    "tenRap": "Rạp 9",
+                                    "ngayChieuGioChieu": "2024-11-29T12:00:00",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                },
+                                {
+                                    "maLichChieu": "46701",
+                                    "maRap": "470",
+                                    "tenRap": "Rạp 10",
+                                    "ngayChieuGioChieu": "2024-11-29T12:00:00",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "bhd-star-cineplex-bitexco",
+                            "tenCumRap": "BHD Star Cineplex - Bitexco",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "L3-Bitexco Icon 68, 2 Hải Triều, Q.1"
+                        },
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46702",
+                                    "maRap": "510",
+                                    "tenRap": "Rạp 10",
+                                    "ngayChieuGioChieu": "2024-11-12T03:00:00",
+                                    "giaVe": 150000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "bhd-star-cineplex-vincom-thao-dien",
+                            "tenCumRap": "BHD Star Cineplex - Vincom Thảo Điền",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "L5-Megamall, 159 XL Hà Nội, Q.2"
+                        }
+                    ],
+                    "maHeThongRap": "BHDStar",
+                    "tenHeThongRap": "BHD Star Cineplex",
+                    "logo": "http://movieapi.cyberlearn.vn/hinhanh/bhd-star-cineplex.png"
+                },
+                {
+                    "cumRapChieu": [
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46666",
+                                    "maRap": "518",
+                                    "tenRap": "Rạp 8",
+                                    "ngayChieuGioChieu": "2024-04-25T04:00:00",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "cgv-aeon-binh-tan",
+                            "tenCumRap": "CGV - Aeon Bình Tân",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "Tầng 3, TTTM Aeon Mall Bình Tân, Số 1 đường số 17A, khu phố 11, Bình Trị Đông B, Bình Tân"
+                        },
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46690",
+                                    "maRap": "568",
+                                    "tenRap": "Rạp 8",
+                                    "ngayChieuGioChieu": "2024-10-08T11:42:59",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "cgv-golden-plaza",
+                            "tenCumRap": "CGV - Golden Plaza",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "Tầng 4, Trung tâm thương mại Golden Plaza, 922 Nguyễn Trãi, P. 14, Q. 5"
+                        },
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46691",
+                                    "maRap": "578",
+                                    "tenRap": "Rạp 8",
+                                    "ngayChieuGioChieu": "2024-10-02T01:00:00",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "cgv-hoang-van-thu",
+                            "tenCumRap": "CGV - Hoàng Văn Thụ",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "Tầng 1 và 2 Gala Center, 415 Hoàng Văn Thụ, P. 2, Tân Bình"
+                        },
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46707",
+                                    "maRap": "559",
+                                    "tenRap": "Rạp 9",
+                                    "ngayChieuGioChieu": "2025-06-03T00:00:00",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "cgv-ct-plaza",
+                            "tenCumRap": "CGV - CT Plaza",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "60A Trường Sơn,P. 2, Tân Bình"
+                        }
+                    ],
+                    "maHeThongRap": "CGV",
+                    "tenHeThongRap": "cgv",
+                    "logo": "http://movieapi.cyberlearn.vn/hinhanh/cgv.png"
+                },
+                {
+                    "cumRapChieu": [
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46263",
+                                    "maRap": "772",
+                                    "tenRap": "Rạp 2",
+                                    "ngayChieuGioChieu": "2022-11-06T12:46:00",
+                                    "giaVe": 200000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "glx-nguyen-van-qua",
+                            "tenCumRap": "GLX - Nguyễn Văn Quá",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "119B Nguyễn Văn Quá, Đông Hưng Thuận, Q.12, TPHCM"
+                        }
+                    ],
+                    "maHeThongRap": "Galaxy",
+                    "tenHeThongRap": "Galaxy Cinema",
+                    "logo": "http://movieapi.cyberlearn.vn/hinhanh/galaxy-cinema.png"
+                }
+            ],
+            "maPhim": 10948,
+            "tenPhim": "Avatar 2: Dòng chảy của nước",
+            "biDanh": "avatar-2-dong-chay-cua-nuoc",
+            "trailer": "https://www.youtube.com/embed/Ru4Jbmh7bcQ",
+            "hinhAnh": "http://movieapi.cyberlearn.vn/hinhanh/avatar-2-_gp00.jpg",
+            "moTa": "Avatar: Dòng chảy của nước là một bộ phim điện ảnh thuộc thể loại khoa học viễn tưởng và sử thi của Mỹ dự kiến ra mắt năm 2022. Tác phẩm do James Cameron đạo diễn, viết kịch bản và hợp tác sản xuất với 20th Century Studios. Đây sẽ là phần phim thứ hai trong loạt phim Avatar, sau phần một cùng tên năm 2009.",
+            "maNhom": "GP00",
+            "hot": true,
+            "dangChieu": true,
+            "sapChieu": false,
+            "ngayKhoiChieu": "2024-11-12T00:00:00",
+            "danhGia": 9
+        },
+        "dateTime": "2025-07-22T09:31:49.1792185+07:00",
+        "messageConstants": null
+    },
+    {
+        "statusCode": 200,
+        "message": "Xử lý thành công!",
+        "content": {
+            "heThongRapChieu": [
+                {
+                    "cumRapChieu": [
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46298",
+                                    "maRap": "558",
+                                    "tenRap": "Rạp 8",
+                                    "ngayChieuGioChieu": "2022-12-05T11:01:39",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "cgv-ct-plaza",
+                            "tenCumRap": "CGV - CT Plaza",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "60A Trường Sơn,P. 2, Tân Bình"
+                        }
+                    ],
+                    "maHeThongRap": "CGV",
+                    "tenHeThongRap": "cgv",
+                    "logo": "http://movieapi.cyberlearn.vn/hinhanh/cgv.png"
+                },
+                {
+                    "cumRapChieu": [
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46297",
+                                    "maRap": "764",
+                                    "tenRap": "Rạp 4",
+                                    "ngayChieuGioChieu": "2022-12-06T11:01:11",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "glx-nguyen-du\r\n",
+                            "tenCumRap": "GLX - Nguyễn Du",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "116 Nguyễn Du, Q.1"
+                        }
+                    ],
+                    "maHeThongRap": "Galaxy",
+                    "tenHeThongRap": "Galaxy Cinema",
+                    "logo": "http://movieapi.cyberlearn.vn/hinhanh/galaxy-cinema.png"
+                }
+            ],
+            "maPhim": 11047,
+            "tenPhim": "Đêm hung tàn",
+            "biDanh": "dem-hung-tan",
+            "trailer": "https://www.youtube.com/embed/oR0FHw_Wo6U",
+            "hinhAnh": "http://movieapi.cyberlearn.vn/hinhanh/dem-hung-tan_gp00.jpg",
+            "moTa": "Đêm hung tàn bắt đầu khi một nhóm lính đánh thuê đột nhập vào dinh thự giàu có của gia đình Lightstone đúng đêm Giáng sinh. Dự tính sẽ bắt cóc tất cả thành viên của gia đình làm con tin, nhưng chúng lại vô tình chạm trán với một đối thủ không thể ngờ tới: Santa Claus (David Harbour của Black Widow và loạt Stranger Things). Đây là một ông già Noel rất khác với những gì thường thấy, không hề ngại bạo lực và cực kỳ giàu tinh thần chiến đấu.",
+            "maNhom": "GP00",
+            "hot": true,
+            "dangChieu": true,
+            "sapChieu": false,
+            "ngayKhoiChieu": "2024-06-23T00:00:00",
+            "danhGia": 9
+        },
+        "dateTime": "2025-07-22T09:32:17.8835729+07:00",
+        "messageConstants": null
+    },
+    {
+        "statusCode": 200,
+        "message": "Xử lý thành công!",
+        "content": {
+            "heThongRapChieu": [
+                {
+                    "cumRapChieu": [
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46440",
+                                    "maRap": "451",
+                                    "tenRap": "Rạp 1",
+                                    "ngayChieuGioChieu": "2023-05-17T09:56:46",
+                                    "giaVe": 80000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "bhd-star-cineplex-3-2",
+                            "tenCumRap": "BHD Star Cineplex - 3/2",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "L5-Vincom 3/2, 3C Đường 3/2, Q.10"
+                        }
+                    ],
+                    "maHeThongRap": "BHDStar",
+                    "tenHeThongRap": "BHD Star Cineplex",
+                    "logo": "http://movieapi.cyberlearn.vn/hinhanh/bhd-star-cineplex.png"
+                },
+                {
+                    "cumRapChieu": [
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46630",
+                                    "maRap": "852",
+                                    "tenRap": "Rạp 2",
+                                    "ngayChieuGioChieu": "2024-02-19T12:00:00",
+                                    "giaVe": 100000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "lotte-go-vap",
+                            "tenCumRap": "Lotte - Gò Vấp",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "L3-Lotte Mart, 242 Nguyễn Văn Lượng, Gò Vấp"
+                        }
+                    ],
+                    "maHeThongRap": "LotteCinima",
+                    "tenHeThongRap": "Lotte Cinema",
+                    "logo": "http://movieapi.cyberlearn.vn/hinhanh/lotte-cinema.png"
+                }
+            ],
+            "maPhim": 11179,
+            "tenPhim": "SIÊU LỪA GẶP SIÊU LẦY",
+            "biDanh": "sieu-lua-gap-sieu-lay",
+            "trailer": "https://www.youtube.com/embed/ecNMIlP7wIs",
+            "hinhAnh": "http://movieapi.cyberlearn.vn/hinhanh/sieu-lua-gap-sieu-lay_gp00.jpeg",
+            "moTa": "Thuộc phong cách hành động – hài hước với các “cú lừa” thông minh và lầy lội đến từ bộ đôi Tú (Anh Tú) và Khoa (Mạc Văn Khoa), Siêu Lừa Gặp Siêu Lầy của đạo diễn Võ Thanh Hòa theo chân của Khoa – tên lừa đảo tầm cỡ “quốc nội” đến đảo ngọc Phú Quốc với mong muốn đổi đời.",
+            "maNhom": "GP00",
+            "hot": true,
+            "dangChieu": true,
+            "sapChieu": false,
+            "ngayKhoiChieu": "2024-06-22T00:00:00",
+            "danhGia": 10
+        },
+        "dateTime": "2025-07-22T09:32:46.5383543+07:00",
+        "messageConstants": null
+    },
+    {
+        "statusCode": 200,
+        "message": "Xử lý thành công!",
+        "content": {
+            "heThongRapChieu": [
+                {
+                    "cumRapChieu": [
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46679",
+                                    "maRap": "456",
+                                    "tenRap": "Rạp 6",
+                                    "ngayChieuGioChieu": "2024-06-24T12:00:00",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                },
+                                {
+                                    "maLichChieu": "46680",
+                                    "maRap": "457",
+                                    "tenRap": "Rạp 7",
+                                    "ngayChieuGioChieu": "2024-06-24T12:30:00",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "bhd-star-cineplex-3-2",
+                            "tenCumRap": "BHD Star Cineplex - 3/2",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "L5-Vincom 3/2, 3C Đường 3/2, Q.10"
+                        }
+                    ],
+                    "maHeThongRap": "BHDStar",
+                    "tenHeThongRap": "BHD Star Cineplex",
+                    "logo": "http://movieapi.cyberlearn.vn/hinhanh/bhd-star-cineplex.png"
+                },
+                {
+                    "cumRapChieu": [
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46437",
+                                    "maRap": "523",
+                                    "tenRap": "Rạp 3",
+                                    "ngayChieuGioChieu": "2023-04-12T20:50:39",
+                                    "giaVe": 100000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "cgv-aeon-tan-phu",
+                            "tenCumRap": "CGV - Aeon Tân Phú",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "30 Bờ Bao Tân Thắng, Sơn Kỳ, Tân Phú"
+                        },
+                        {
+                            "lichChieuPhim": [
+                                {
+                                    "maLichChieu": "46704",
+                                    "maRap": "685",
+                                    "tenRap": "Rạp 5",
+                                    "ngayChieuGioChieu": "2024-12-12T12:00:00",
+                                    "giaVe": 75000,
+                                    "thoiLuong": 120
+                                }
+                            ],
+                            "maCumRap": "cgv-vincom-go-vap",
+                            "tenCumRap": "CGV - Vincom Gò Vấp",
+                            "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png",
+                            "diaChi": "Tầng 5 TTTM Vincom Plaza Gò Vấp, 12 Phan Văn Trị, P. 7, Gò Vấp"
+                        }
+                    ],
+                    "maHeThongRap": "CGV",
+                    "tenHeThongRap": "cgv",
+                    "logo": "http://movieapi.cyberlearn.vn/hinhanh/cgv.png"
+                }
+            ],
+            "maPhim": 11218,
+            "tenPhim": "Super Mario Bros",
+            "biDanh": "super-mario-bros",
+            "trailer": "https://www.youtube.com/embed/UGO_i2tf1BM",
+            "hinhAnh": "http://movieapi.cyberlearn.vn/hinhanh/anh-em-super-mario_gp00.jpg",
+            "moTa": "Mario và em trai Luigi sống tại Brooklyn. Cả hai bị gắn bất tài vô dụng, từ người nhà đến người ngoài đều chê cười. Biến cố xảy ra khiến Luigi mất tích, Mario phải dấn thân vào cuộc phiêu lưu nguy hiểm để cứu cậu. Cùng nàng công chúa Peach và nấm Toad, anh thợ thấp bé quyết tâm chống lại bạo chúa Bowser – kẻ tham vọng thống trị thế giới. ",
+            "maNhom": "GP00",
+            "hot": false,
+            "dangChieu": true,
+            "sapChieu": false,
+            "ngayKhoiChieu": "2024-11-29T13:31:13.383",
+            "danhGia": 10
+        },
+        "dateTime": "2025-07-22T09:33:20.8767445+07:00",
+        "messageConstants": null
+    }
+]
