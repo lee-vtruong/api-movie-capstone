@@ -1,6 +1,6 @@
 import { QLNguoiDungService, quanLyNguoiDungService } from "../../services/QuanLyNguoiDungService";
 import { DANG_NHAP_ACTION } from "./types/QuanLyNguoiDungType";
-import { ACCESS_TOKEN, USER_LOGIN } from "../../util/settings/config"; // Import hằng số
+import { ACCESS_TOKEN, USER_LOGIN } from "../../util/settings/config"; 
 
 export const dangNhapAction = (thongTinDangNhap) => {
     return async (dispatch) => {

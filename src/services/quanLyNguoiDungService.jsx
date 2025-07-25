@@ -7,8 +7,6 @@ export class QuanLyNguoiDungService extends baseService {
     }
 
     dangNhap = (thongTinDangNhap) => {
-        // console.log('URL:', `${DOMAIN}api/QuanLyNguoiDung/DangNhap`);
-        // console.log('Data:', thongTinDangNhap);
         return this.post(`api/QuanLyNguoiDung/DangNhap`, thongTinDangNhap);
     }
 
