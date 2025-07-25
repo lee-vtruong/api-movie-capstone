@@ -1,0 +1,54 @@
+.ghe {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    background-color: rgb(123, 122, 122);
+    color: white;
+    border: none;
+    font-size: 12px;
+}
+
+.ghe:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.ghe:disabled {
+    cursor: not-allowed;
+}
+
+.gheDaDat {
+    background-color: rgb(232, 76, 76) !important;
+}
+
+.gheDangDat {
+    background-color: rgb(18, 171, 18) !important;
+}
+
+.gheVip {
+    background-color: rgb(228, 125, 7);
+}
+
+.gheDaDuocDatBoiMinh {
+    background-color: rgb(246, 246, 246) !important;
+    -webkit-box-shadow: -1px 2px 18px -4px #000000;
+    box-shadow: -1px 2px 18px -4px #000000;
+    color: orange !important;
+    border: 1px solid orange;
+}
+
+.trapezoid {
+    border-bottom: 50px solid rgba(128, 128, 128, 0.5);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 90%;
+    filter: drop-shadow(0 10px 10px #000);
+}
+
+.gheNguoiKhacDat {
+    background-color: rgb(240, 185, 36) !important;
+    cursor: not-allowed;
+}

@@ -1,75 +1,153 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { Fragment } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { Menu, Transition } from '@headlessui/react';
+import { GlobeAltIcon, ChevronDownIcon, UserCircleIcon } from '@heroicons/react/20/solid'; 
+import { useTranslation } from 'react-i18next';
+
+import { ACCESS_TOKEN, USER_LOGIN } from '../../../util/settings/config';
+import { DANG_XUAT_ACTION } from '../../../redux/actions/types/QuanLyNguoiDungType';
+
+const LanguageSwitcher = () => {
+    const { i18n } = useTranslation();
+    const languages = [
+        { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' },
+        { code: 'en', name: 'English', flag: '🇬🇧' },
+        { code: 'zh', name: '中文', flag: '🇨🇳' },
+    ];
+    const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+
+    return (
+        <Menu as="div" className="relative inline-block text-left">
+            <Menu.Button className="inline-flex items-center justify-center w-full px-3 py-2 text-sm font-semibold text-gray-300 bg-white/5 rounded-md shadow-sm hover:bg-white/10 ring-1 ring-inset ring-gray-700 transition-colors">
+                <GlobeAltIcon className="w-5 h-5" aria-hidden="true" />
+                <span className="mx-1.5">{currentLanguage.flag}</span>
+                <ChevronDownIcon className="w-5 h-5 text-gray-400" aria-hidden="true" />
+            </Menu.Button>
+            <Transition as={Fragment} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+                <Menu.Items className="absolute right-0 z-10 w-40 mt-2 origin-top-right bg-gray-900/90 backdrop-blur-sm rounded-md shadow-lg ring-1 ring-white/10 focus:outline-none">
+                    <div className="py-1">
+                        {languages.map((lang) => (
+                            <Menu.Item key={lang.code}>
+                                {({ active }) => (
+                                    <button
+                                        onClick={() => i18n.changeLanguage(lang.code)}
+                                        className={`${
+                                            active || i18n.language === lang.code ? 'bg-cyan-500 text-white' : 'text-gray-300'
+                                        } group flex w-full items-center rounded-md px-4 py-2 text-sm transition-colors`}
+                                    >
+                                        <span className="mr-3">{lang.flag}</span>
+                                        {lang.name}
+                                    </button>
+                                )}
+                            </Menu.Item>
+                        ))}
+                    </div>
+                </Menu.Items>
+            </Transition>
+        </Menu>
+    );
+};
 
 export default function HeaderLayout() {
-  return (
-    <header className="p-2 bg-gray-900 text-gray-100 fixed w-full z-10 opacity-70">
-      <div className="container mx-auto w-full max-w-screen-xl p-4 py-2 lg:py-8">
-        <div className="container flex justify-between h-1 mx-auto">
-          <NavLink
-            to="/"
-            aria-label="Back to homepage"
-            className={({ isActive }) =>
-              `flex items-center p-2 ${isActive ? 'text-white font-bold' : 'text-gray-300'}`
-            }
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-8 h-8 text-gray-100">
-              <path d="M27.912 7.289l-10.324-5.961c-0.455-0.268-1.002-0.425-1.588-0.425s-1.133 0.158-1.604 0.433l0.015-0.008-10.324 5.961c-0.955 0.561-1.586 1.582-1.588 2.75v11.922c0.002 1.168 0.635 2.189 1.574 2.742l0.016 0.008 10.322 5.961c0.455 0.267 1.004 0.425 1.59 0.425 0.584 0 1.131-0.158 1.602-0.433l-0.014 0.008 10.322-5.961c0.955-0.561 1.586-1.582 1.588-2.75v-11.922c-0.002-1.168-0.633-2.189-1.573-2.742zM27.383 21.961c0 0.389-0.211 0.73-0.526 0.914l-0.004 0.002-10.324 5.961c-0.152 0.088-0.334 0.142-0.53 0.142s-0.377-0.053-0.535-0.145l0.005 0.002-10.324-5.961c-0.319-0.186-0.529-0.527-0.529-0.916v-11.922c0-0.389 0.211-0.73 0.526-0.914l0.004-0.002 10.324-5.961c0.152-0.090 0.334-0.143 0.53-0.143s0.377 0.053 0.535 0.144l-0.006-0.002 10.324 5.961c0.319 0.185 0.529 0.527 0.529 0.916z" />
-              <path d="M22.094 19.451h-0.758c-0.188 0-0.363 0.049-0.515 0.135l0.006-0.004-4.574 2.512-5.282-3.049v-6.082l5.282-3.051 4.576 2.504c0.146 0.082 0.323 0.131 0.508 0.131h0.758c0.293 0 0.529-0.239 0.529-0.531v-0.716c0-0.2-0.11-0.373-0.271-0.463l-0.004-0.002-5.078-2.777c-0.293-0.164-0.645-0.26-1.015-0.26-0.39 0-0.756 0.106-1.070 0.289l0.010-0.006-5.281 3.049c-0.636 0.375-1.056 1.055-1.059 1.834v6.082c0 0.779 0.422 1.461 1.049 1.828l0.009 0.006 5.281 3.049c0.305 0.178 0.67 0.284 1.061 0.284 0.373 0 0.723-0.098 1.027-0.265l-0.012 0.006 5.080-2.787c0.166-0.091 0.276-0.265 0.276-0.465v-0.716c0-0.293-0.238-0.529-0.529-0.529z" />
-            </svg>
-          </NavLink>
-          <ul className="items-stretch hidden space-x-3 lg:flex">
-            <li className="flex">
-              <NavLink
-                to="/home"
-                className={({ isActive }) =>
-                  `flex items-center px-4 -mb-1 border-b-2 ${isActive ? 'border-white text-white font-bold' : 'border-gray-700 text-gray-300'}`
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className="flex">
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  `flex items-center px-4 -mb-1 border-b-2 ${isActive ? 'border-white text-white font-bold' : 'border-gray-700 text-gray-300'}`
-                }
-              >
-                Contact
-              </NavLink>
-            </li>
-            <li className="flex">
-              <NavLink
-                to="/news"
-                className={({ isActive }) =>
-                  `flex items-center px-4 -mb-1 border-b-2 ${isActive ? 'border-white text-white font-bold' : 'border-gray-700 text-gray-300'}`
-                }
-              >
-                News
-              </NavLink>
-            </li>
-          </ul>
-          <div className="items-center flex-shrink-0 hidden lg:flex">
-            <NavLink
-              to="/login"
-              className={({ isActive }) =>
-                `self-center px-8 py-3 rounded ${isActive ? 'bg-white text-gray-900 font-bold' : 'bg-gray-800 text-gray-300'}`
-              }
-            >
-              Sign in
-            </NavLink>
-            <NavLink
-              to="/register"
-              className={({ isActive }) =>
-                `self-center px-8 py-3 font-semibold rounded ${isActive ? 'bg-white text-gray-900 font-bold' : 'bg-gray-800 text-gray-300'}`
-              }
-            >
-              Sign up
-            </NavLink>
-          </div>
-        </div>
-      </div>
-    </header>
-  )
+    const { userLogin } = useSelector(state => state.QuanLyNguoiDungReducer);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const { t } = useTranslation();
+
+    const handleLogout = () => {
+        localStorage.removeItem(USER_LOGIN);
+        localStorage.removeItem(ACCESS_TOKEN);
+        dispatch({ type: DANG_XUAT_ACTION });
+        navigate('/');
+    };
+
+    const renderLoginNav = () => {
+        if (userLogin?.accessToken) {
+            return (
+                <Menu as="div" className="relative inline-block text-left">
+                    <Menu.Button className="inline-flex items-center justify-center w-full gap-x-2 rounded-md bg-white/5 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-white/10 ring-1 ring-inset ring-gray-700 transition-colors">
+                        <UserCircleIcon className="w-6 h-6 text-cyan-400" />
+                        {userLogin.taiKhoan}
+                        <ChevronDownIcon className="w-5 h-5 -mr-1 text-gray-400" aria-hidden="true" />
+                    </Menu.Button>
+                    <Transition as={Fragment} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+                        <Menu.Items className="absolute right-0 z-10 w-56 mt-2 origin-top-right bg-gray-900/90 backdrop-blur-sm rounded-md shadow-lg ring-1 ring-white/10 focus:outline-none">
+                            <div className="p-1">
+                                <Menu.Item>
+                                    {({ active }) => (
+                                        <button className={`${active ? 'bg-gray-700 text-white' : 'text-gray-300'} group flex w-full items-center rounded-md px-2 py-2 text-sm transition-colors`}>
+                                            {t('profile')}
+                                        </button>
+                                    )}
+                                </Menu.Item>
+                                <div className="my-1 h-px bg-gray-700" />
+                                <Menu.Item>
+                                    {({ active }) => (
+                                        <button
+                                            onClick={handleLogout}
+                                            className={`${active ? 'bg-red-600 text-white' : 'text-red-500'} group flex w-full items-center rounded-md px-2 py-2 text-sm font-semibold transition-colors`}
+                                        >
+                                            {t('logout')}
+                                        </button>
+                                    )}
+                                </Menu.Item>
+                            </div>
+                        </Menu.Items>
+                    </Transition>
+                </Menu>
+            );
+        }
+
+        return (
+            <>
+                <NavLink to="/login" className="px-4 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-white/10 transition-colors">
+                    {t('signin')}
+                </NavLink>
+                <NavLink to="/register" className="px-4 py-2 text-sm font-semibold text-white bg-cyan-500 rounded-md hover:bg-cyan-600 transition-colors shadow-lg shadow-cyan-500/20">
+                    {t('signup')}
+                </NavLink>
+            </>
+        );
+    };
+
+    const navLinkClass = ({ isActive }) =>
+        `flex items-center px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
+            isActive ? 'bg-white/10 text-white' : 'text-gray-400 hover:bg-white/5 hover:text-white'
+        }`;
+
+    return (
+        <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-500/30">
+            <div className="container mx-auto px-4">
+                <div className="flex justify-between items-center h-16">
+                    <div className="flex items-center space-x-8">
+                        <NavLink to="/" aria-label="Back to homepage" className="flex-shrink-0 flex items-center p-2 transform transition-transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-8 h-8 text-cyan-400">
+                                <path d="M27.912 7.289l-1.953-1.13c-0.352-0.203-0.789-0.203-1.141 0l-6.289 3.633-6.289-3.633c-0.352-0.203-0.789-0.203-1.141 0l-1.953 1.13c-0.352 0.203-0.57 0.582-0.57 0.996v7.266l-2.281-1.316c-0.352-0.203-0.789-0.203-1.141 0l-1.953 1.13c-0.352 0.203-0.57 0.582-0.57 0.996v2.262c0 0.414 0.219 0.793 0.57 0.996l1.953 1.13c0.352 0.203 0.789 0.203 1.141 0l2.281-1.316v7.266c0 0.414 0.219 0.793 0.57 0.996l1.953 1.13c0.352 0.203 0.789 0.203 1.141 0l6.289-3.633 6.289 3.633c0.352 0.203 0.789 0.203 1.141 0l1.953-1.13c0.352-0.203 0.57-0.582 0.57-0.996v-7.266l2.281 1.316c0.352 0.203 0.789 0.203 1.141 0l1.953-1.13c0.352-0.203 0.57-0.582 0.57-0.996v-2.262c0-0.414-0.219-0.793-0.57-0.996l-1.953-1.13c-0.352-0.203-0.789-0.203-1.141 0l-2.281 1.316v-7.266c-0.004-0.414-0.223-0.793-0.574-0.996z" />
+                                <path d="M22.094 19.451l-4.141-2.393v-4.783l4.141 2.393zM14.049 12.275l-4.141 2.393 4.141 2.393v-4.785zM15.998 10.096l4.141-2.393-4.141-2.393-4.141 2.393zM15.998 26.689l-6.289-3.633v-7.266l6.289 3.633zM15.998 26.689l6.289-3.633v-7.266l-6.289 3.633z" />
+                            </svg>
+                        </NavLink>
+                        <nav className="hidden lg:flex items-center space-x-2">
+                            <NavLink to="/home" className={navLinkClass}>{t('home')}</NavLink>
+                            <NavLink to="/contact" className={navLinkClass}>{t('contact')}</NavLink>
+                            <NavLink to="/news" className={navLinkClass}>{t('news')}</NavLink>
+                        </nav>
+                    </div>
+
+                    <div className="hidden lg:flex items-center space-x-4">
+                        {renderLoginNav()}
+                        <LanguageSwitcher />
+                    </div>
+
+                    <div className="flex lg:hidden">
+                        <button className="p-2 -mr-2 text-gray-300 rounded-md hover:bg-white/10 hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    );
 }

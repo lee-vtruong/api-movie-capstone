@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import 'antd/dist/reset.css';
 
 .ant-tabs-left > .ant-tabs-nav .ant-tabs-tab {
     display: flex !important;
@@ -8,3 +9,77 @@
     margin-bottom: 8px !important;   
 }
 
+@layer components {
+  .input-style {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white;
+  }
+  .error-style {
+    @apply text-red-500 text-xs mt-1;
+  }
+}
+
+body {
+    @apply bg-gray-900;
+}
+
+/* Tùy chỉnh cho Tabs chính (Lịch Chiếu, Thông Tin, Đánh Giá) */
+.main-detail-tabs .ant-tabs-nav {
+  margin-bottom: 2rem !important;
+}
+
+.main-detail-tabs .ant-tabs-tab {
+  padding: 12px 0 !important;
+  color: #9ca3af !important; 
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+}
+
+.main-detail-tabs .ant-tabs-tab:hover {
+  color: #ffffff !important;
+}
+
+.main-detail-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #22d3ee !important;
+}
+
+.main-detail-tabs .ant-tabs-ink-bar {
+  background: #22d3ee !important;
+  height: 3px !important;
+  border-radius: 3px;
+}
+
+
+/* Tùy chỉnh cho Tabs Lịch Chiếu (Hệ thống rạp) */
+.lich-chieu-tabs .ant-tabs-tab {
+  padding: 0 !important;
+  border-radius: 0.5rem; 
+  margin-bottom: 0.5rem !important;
+}
+
+.lich-chieu-tabs .ant-tabs-tab:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.lich-chieu-tabs .ant-tabs-tab.ant-tabs-tab-active {
+  background-color: rgba(34, 211, 238, 0.1); 
+  position: relative;
+}
+
+.lich-chieu-tabs .ant-tabs-tab.ant-tabs-tab-active::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 25%;
+  bottom: 25%;
+  width: 4px;
+  background-color: #22d3ee;
+  border-radius: 9999px;
+}
+
+.lich-chieu-tabs .ant-tabs-ink-bar {
+  display: none !important;
+}
+
+.lich-chieu-tabs .ant-tabs-nav-wrap {
+  border-right: 1px solid #374151; 
+}

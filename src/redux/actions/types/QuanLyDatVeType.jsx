@@ -1,0 +1,4 @@
+export const SET_CHI_TIET_PHONG_VE = 'SET_CHI_TIET_PHONG_VE'
+export const DAT_GHE = 'DAT_GHE'
+export const DAT_VE_HOAN_TAT = 'DAT_VE_HOAN_TAT'
+export const SET_GHE_NGUOI_KHAC_DANG_DAT = 'SET_GHE_NGUOI_KHAC_DANG_DAT'

@@ -4,7 +4,6 @@ import { baseService } from "./baseService";
 export class QuanLyRapService extends baseService {
     constructor() {
         super();
-        // console.log('Errors...');
     }
 
     layDanhSachHeThongRap = () => {
@@ -12,8 +11,15 @@ export class QuanLyRapService extends baseService {
     }   
 
     layThongTinChiTietPhim = (id) => {
-        // console.log('id2', id);
         return this.get(`api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${id}`)
+    }
+
+    layThongTinHeThongRap = () => {
+        return this.get(`api/QuanLyRap/LayThongTinHeThongRap`);
+    }
+
+    layThongTinCumRapTheoHeThong = (maHeThongRap) => {
+        return this.get(`api/QuanLyRap/LayThongTinCumRapTheoHeThong?maHeThongRap=${maHeThongRap}`);
     }
 }
 

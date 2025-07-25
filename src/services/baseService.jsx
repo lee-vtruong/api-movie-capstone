@@ -1,27 +1,34 @@
+// src/services/baseService.jsx
+
 import Axios from 'axios';
 import { DOMAIN, TOKEN_CYBERSOFT, ACCESS_TOKEN } from '../util/settings/config';
 
 export class baseService {
     put = (url, model) => {
         return Axios({
-            url: `${DOMAIN}${url}`, 
+            url: `${DOMAIN}${url}`,
             method: 'PUT',
             data: model,
             headers: {
+                'Content-Type': 'application/json-patch+json', 
                 'Authorization': 'Bearer ' + localStorage.getItem(ACCESS_TOKEN),
-                'TokenCybersoft': TOKEN_CYBERSOFT 
+                'TokenCybersoft': TOKEN_CYBERSOFT
             }
         });
     }
 
-    post = (url, model) => {
+   post = (url, data) => {
+        const isFormData = data instanceof FormData;
+
         return Axios({
             url: `${DOMAIN}${url}`,
             method: 'POST',
-            data: model,
+            data: data,
             headers: {
+                ...(!isFormData && { 'Content-Type': 'application/json-patch+json' }),
+                
                 'Authorization': 'Bearer ' + localStorage.getItem(ACCESS_TOKEN),
-                'TokenCybersoft': TOKEN_CYBERSOFT 
+                'TokenCybersoft': TOKEN_CYBERSOFT
             }
         });
     }
@@ -32,7 +39,7 @@ export class baseService {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem(ACCESS_TOKEN),
-                'TokenCybersoft': TOKEN_CYBERSOFT 
+                'TokenCybersoft': TOKEN_CYBERSOFT
             }
         });
     }
@@ -43,7 +50,7 @@ export class baseService {
             method: 'DELETE',
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem(ACCESS_TOKEN),
-                'TokenCybersoft': TOKEN_CYBERSOT 
+                'TokenCybersoft': TOKEN_CYBERSOFT
             }
         });
     }

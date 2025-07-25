@@ -1,1 +1,2 @@
 export const DANG_NHAP_ACTION = "DANG_NHAP_ACTION"
+export const DANG_XUAT_ACTION = 'DANG_XUAT_ACTION';
